@@ -76,12 +76,12 @@
             padding: 20px;
             box-shadow: 0px 0px 3px 0px gray;
 
-            display: none;
+            /*display: none;*/
+        }
+        .mypost > .input-group{
+            margin: auto;
         }
 
-        .mypost > #wine_type {
-            box-sizing: 100px;
-        }
 
         .mybtns {
             display: flex;
@@ -96,6 +96,7 @@
         }
         .form-floating{
             margin:10px;
+            /*margin: 0px auto;*/
         }
     </style>
     <script>
@@ -174,7 +175,20 @@
         <input id="url" type="email" class="form-control" placeholder="name@example.com">
         <label>영화URL</label>
     </div>
-    <div class="input-group mb-3">
+
+    <div class="form-floating" id="wine_type" style="width: 200px">
+        <textarea id="wine_type" class="form-control" placeholder="Leave a Type here"></textarea>
+        <label for="floatingTextarea2">종류</label>
+    </div>
+    <div class="form-floating" id="wine_name"  style="width: 200px">
+        <textarea id="wine_name" class="form-control" placeholder="Leave a name here"></textarea>
+        <label for="floatingTextarea2">이름</label>
+    </div>
+    <div class="form-floating" id="wine_origin">
+        <textarea id="wine_origin" class="form-control" placeholder="Leave a country of origin here"></textarea>
+        <label for="floatingTextarea2">원산지</label>
+    </div>
+    <div class="input-group mb-1" style="width: 440px">
         <label class="input-group-text" for="inputGroupSelect01">별점</label>
         <select class="form-select" id="star">
             <option selected>-- 선택하기 --</option>
@@ -185,24 +199,16 @@
             <option value="5">⭐⭐⭐⭐⭐</option>
         </select>
     </div>
-    <div class="abcde" id="wine_type">
-        <textarea id="wine_type" class="form-control" placeholder="Leave a Type here"></textarea>
-        <label for="floatingTextarea2">종류</label>
-    </div>
-    <div class="form-floating" id="wine_name">
-        <textarea id="wine_name" class="form-control" placeholder="Leave a name here"></textarea>
-        <label for="floatingTextarea2">이름</label>
-    </div>
-    <div class="form-floating" id="wine_origin">
-        <textarea id="wine_origin" class="form-control" placeholder="Leave a country of origin here"></textarea>
-        <label for="floatingTextarea2">원산지</label>
-    </div>
-    <div class="form-floating" id="wine_comment">
-        <textarea id="wine_comment" class="form-control" placeholder="Leave a comment here"></textarea>
-        <label for="floatingTextarea2">코멘트</label>
+<!--    <div class="form-floating" id="wine_comment">-->
+<!--        <textarea id="wine_comment" class="form-control" placeholder="Leave a comment here"></textarea>-->
+<!--        <label for="floatingTextarea2">코멘트</label>-->
+<!--    </div>-->
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+      <label for="floatingTextarea2">설명</label>
     </div>
     <div class="mybtns">
-        <button onclick="posting()" type="button" class="btn btn-dark">기록하기</button>
+        <button onclick="posting()" type="button" class="btn btn-dark">추천하기</button>
         <button onclick="close_box()" type="button" class="btn btn-outline-dark">닫기</button>
     </div>
 </div>
