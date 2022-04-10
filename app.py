@@ -9,8 +9,7 @@ client = MongoClient('mongodb+srv://test:sparta@cluster0.kxazb.mongodb.net/Clust
 db = client.dbsparta
 
 import hashlib
-hashing = hashlib.sha256()
-
+import jwt
 
 @app.route('/')
 def home():
@@ -41,12 +40,13 @@ def users():
     return jsonify({'msg':'회원 가입 완료!'})
 
 
-
-
-@app.route("/movie", methods=["GET"])
-def movie_get():
-    movie_list = list(db.movies.find({}, {'_id': False}))
-    return jsonify({'movies':movie_list})
+@app.route("/login", methods=["POST"])
+def login():
+    if request.method == 'POST':
+        _Id_ = request.form['_ID_']
+        _Pw_ = request.form['_PW_']
+        user = db.users.find.one({'user_id' : _Id_},{'user_pwd':_Pw_})
+        fi
 
 
 if __name__ == '__main__':
