@@ -12,7 +12,7 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
 
-    <title>Wine Review</title>
+    <title>Reviewine</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 
@@ -64,7 +64,7 @@
         }
 
         .mycards {
-            margin: 20px auto 0px auto;
+            margin: 20px auto 0 auto;
             width: 95%;
             max-width: 1200px;
         }
@@ -74,13 +74,13 @@
             max-width: 500px;
             margin: 20px auto 10px auto;
             padding: 20px;
-            box-shadow: 0px 0px 3px 0px gray;
+            box-shadow: 0 0 3px 0 gray;
 
-            /*display: none;*/
+            display: none;
         }
-        .mypost > .input-group{
-            margin: auto;
-        }
+        /*.mypost > .input-group{*/
+        /*    margin: auto;*/
+        /*}*/
 
 
         .mybtns {
@@ -96,7 +96,7 @@
         }
         .form-floating{
             margin:10px;
-            /*margin: 0px auto;*/
+            /*margin: 0 auto;*/
         }
     </style>
     <script>
@@ -176,19 +176,19 @@
         <label>영화URL</label>
     </div>
 
-    <div class="form-floating" id="wine_type" style="width: 200px">
+    <div class="form-floating" id="type" style="width: 200px">
         <textarea id="wine_type" class="form-control" placeholder="Leave a Type here"></textarea>
         <label for="floatingTextarea2">종류</label>
     </div>
-    <div class="form-floating" id="wine_name"  style="width: 200px">
+    <div class="form-floating" id="name"  style="width: 200px">
         <textarea id="wine_name" class="form-control" placeholder="Leave a name here"></textarea>
         <label for="floatingTextarea2">이름</label>
     </div>
-    <div class="form-floating" id="wine_origin">
+    <div class="form-floating" id="origin">
         <textarea id="wine_origin" class="form-control" placeholder="Leave a country of origin here"></textarea>
         <label for="floatingTextarea2">원산지</label>
     </div>
-    <div class="input-group mb-1" style="width: 440px">
+    <div class="input-group mb-1" style="width: 440px" id="inputGroupSelect01">
         <label class="input-group-text" for="inputGroupSelect01">별점</label>
         <select class="form-select" id="star">
             <option selected>-- 선택하기 --</option>
