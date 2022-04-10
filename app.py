@@ -3,13 +3,17 @@ app = Flask(__name__)
 
 from pymongo import MongoClient
 
+import hashlib
+import jwt
+
+from datatime import datatime, timedelta
+
 import certifi
 ca = certifi.where()
 client = MongoClient('mongodb+srv://test:sparta@cluster0.kxazb.mongodb.net/Cluster0?retryWrites=true&w=majority', tlsCAFile=ca)
 db = client.dbsparta
 
-import hashlib
-import jwt
+
 
 @app.route('/')
 def home():
@@ -46,7 +50,7 @@ def login():
         _Id_ = request.form['_ID_']
         _Pw_ = request.form['_PW_']
         user = db.users.find.one({'user_id' : _Id_},{'user_pwd':_Pw_})
-        fi
+
 
 
 if __name__ == '__main__':
